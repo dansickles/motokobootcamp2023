@@ -1,3 +1,4 @@
+import Int "mo:base/Int";
 
 actor DAY1 {
 
@@ -21,7 +22,7 @@ actor DAY1 {
     public func set_counter(n : Nat): async () {
         counter := n;
     };
-    public func get_counter(): async Nat {
+    public query func get_counter(): async Nat {
         counter;
     };
 
@@ -34,4 +35,5 @@ actor DAY1 {
     public func is_even(n: Nat): async Bool {
         n % 2 == 0;
     };
+
 }
