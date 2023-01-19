@@ -49,10 +49,10 @@ actor DAY2 {
 
 // 6.  Write a function convert_to_binary that takes a natural number n and returns a string representing the binary representation of n.
 
-    // NOTE: This returns aa string. Not sure what it is though :-|
+    // NOTE: This returns a string. Not sure what it is though :-|
     public func convert_to_binary(n : Nat): async Text {
         let encoded: Blob = Text.encodeUtf8(Nat.toText(n));
-        Array.foldLeft<Text, Text>(Array.map<Nat8, Text>(Iter.toArray(encoded.vals()), Nat8.toText), "YO:", func(a,b) = a # b );
+        Array.foldLeft<Text, Text>(Array.map<Nat8, Text>(Iter.toArray(encoded.vals()), Nat8.toText), "", func(a,b) = a # b );
     };
 
 }
